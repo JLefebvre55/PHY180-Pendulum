@@ -1,0 +1,113 @@
+%% Copyright 2019 Matheus H. J. Saldanha <mhjsaldanha@gmail.com>
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+
+\documentclass[12pt,a4paper]{article}
+
+% Pacotes para o português.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx}     % Comando \includegraphics
+\usepackage{xcolor}       % Comando de cores \textcolor
+\usepackage{indentfirst}  % Indenta o primeiro parágrafo de cada seção
+\usepackage{url}          % Comandos \url e \href
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry} % Define as margens do documento
+\usepackage{multirow}     % Permite criar tabelas com uma célula ocupando várias linhas
+\usepackage{amssymb}      % Símbolos matemáticos
+\usepackage{amsmath}      % Ambientes para escrever fórmulas, \begin{align} por exemplo.
+\usepackage{caption}      % Para definir o estilo das legendas de figuras e tabelas.
+\usepackage{setspace}     % Para definir espaçamento entre linhas. (\onehalfspacing, \singlespacing, \doublespacing)
+\usepackage{breakcites}   % Para permitir quebra de linha no meio de citações.
+\usepackage{times}        % Fonte Times New Roman
+\usepackage{lipsum}       % Para gerar texto temporário. Exemplo: \lipsum \lipsum[1] \lipsum[4-5].
+\usepackage{hyperref}     % Faz os links ficarem azuis e clicáveis. Facilita a navegação pelo PDF.
+
+% Comando para marcar o texto para revisão.
+% \newcommand{\rev}[1]{\textcolor{red}{#1}}
+
+% Permite escrever aspas normais "text" em vez de ``text''
+\usepackage[autostyle]{csquotes}
+\MakeOuterQuote{"}
+
+\begin{document}
+
+\doublespacing
+
+\begin{titlepage}
+    \begin{center}
+        {\large \sc University of Toronto} \\
+        {\large \sc Faculty of Applied Siences and Engineering}\\[0.7cm]
+        {\small \sc Division of Engineering Science}
+        
+        \vspace{4cm}
+
+        % Título.
+        {\large \sc PHY180F}\\
+        \rule{\linewidth}{2pt}
+        
+        \vspace{0.7em} % Ajuste ao seu gosto
+        {\Large \bfseries Pendulum Lab - Final Report}
+        \vspace{0.2em} % Ajuste ao seu gosto
+        
+        \rule{\linewidth}{2pt} \\
+        {\small \sc December 9th, 2020}
+    \end{center}
+    
+    \vspace{2.8cm}
+
+    % Assinaturas
+    \begin{minipage}{0.43\textwidth}
+        \emph{Author:}\\[1cm]
+        \rule{0.9\linewidth}{0.3mm}\\
+        Jayden Lefebvre
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}{0.43\textwidth}
+        \emph{Professor:}
+        \hspace{1.5cm} Dr. Joseph Thywissen\\
+        \emph{Teaching Assistant: }
+        Mr. Saeed Oghbaey
+    \end{minipage}
+
+    \vfill
+\end{titlepage}
+
+
+\pagestyle{empty}
+\tableofcontents
+\newpage
+\setcounter{page}{1}
+\pagestyle{plain} % Agora passa a numerar as páginas
+
+\section{Introduction}
+\label{section:intro}
+\input{text/intro.tex}
+
+\section{Background}
+\label{section:background}
+\input{text/background.tex}
+
+\section{Objectives}
+\label{section:objectives}
+\input{text/objectives.tex}
+
+\section{Method}
+\label{section:method}
+\input{text/method.tex}
+
+
+\newpage
+
+\bibliographystyle{apalike}
+\bibliography{bibliography.bib}
+
+\end{document}
