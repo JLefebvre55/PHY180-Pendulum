@@ -13,6 +13,7 @@ Video files are in FLV format for Tracker compatibility. Videos are shot in 1080
 
 ## Dependencies
 
+ - [VLC](https://www.videolan.org/vlc/)
  - [Tracker Video Analysis and Modeling Tool](https://physlets.org/tracker/)
  - [Python 3](https://www.python.org/) and its dependencies (see [requirements](./requirements.txt))
    - [SciPy](https://www.scipy.org/)
@@ -25,5 +26,5 @@ Video files are in FLV format for Tracker compatibility. Videos are shot in 1080
 The purposes of the [video analysis source files](./src/):
 
  1. `pendulum_fullPeriod` - Pendulum released at 90°, allowed to decay to <15°; **NOT INCLUDED IN REPO, FIND [HERE](https://drive.google.com/file/d/1M0BHg32SPd2ZmKkyaPqAKxjmWZvkTjqi/view?usp=sharing)**
- 2. `pendulum_string{`N`}` - Pendulum released at a reasonable angle with varying lengths (44.75", 39", 34.25", 29", 25.25") where recording N is with pendulum string length N in that set;
- 3. `pendulum_mass{`N`}` - Pendulum released at a reasonable angle with varying bob mass (2030g, 1780g, 1610g, 1370g, 1010g) at string length 3 where recording N is with pendulum bob mass N in that set. **Note:** `pendulum_mass1` is replaced by `pendulum_string3`.
+ 2. `pendulum_string{`N`}` - Pendulum released at a reasonable angle with varying lengths (44.75", 39", 34.25", 29", 25.25"), allowed to oscillate for ~4 periods;
+ 3. `pendulum_mass{`N`}` - Pendulum released at a reasonable angle with varying bob mass (2032g, 1784g, 1607g, 1366g, 1012g), allowed to oscillate for ~4 periods at string length 3. **Note:** `pendulum_mass1` is replaced by `pendulum_string3`.
